@@ -7,7 +7,7 @@ from cStringIO import StringIO
 def print_cyan(prt): print("\033[96m {}\033[00m" .format(prt))
 
 def main():
-	""" Given the URL of a Google Maps "Inside View", this script generates a panoramic image by fetching each image tile and stitching them together.
+	""" Given the URL of a Google Maps Street View URL, this script generates an equirectangular panoramic image by fetching each image tile and stitching them together.
 
 	Example:
 		$ python get_pano.py https://www.google.com/maps/place/Dolby+Theatre/@34.1027387,-118.340471,3a,75y,354h,90t/data=!3m8!1e1!3m6!1soInaTCic7TsAAAQDMaZ31A!2e0!3e2!6s%2F%2Fgeo1.ggpht.com%2Fcbk%3Fpanoid%3DoInaTCic7TsAAAQDMaZ31A%26output%3Dthumbnail%26cb_client%3Dsearch.TACTILE.gps%26thumb%3D2%26w%3D86%26h%3D86%26yaw%3D354.01968%26pitch%3D0!7i13312!8i6656!4m2!3m1!1s0x0000000000000000:0xf5f01d0d3b59ab76!6m1!1e1
