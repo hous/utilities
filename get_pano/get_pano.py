@@ -4,8 +4,6 @@ import urllib2, urllib
 from PIL import Image
 from cStringIO import StringIO
 
-def print_cyan(prt): print("\033[96m {}\033[00m" .format(prt))
-
 def main():
 	""" Given the URL of a Google Maps Street View URL, this script generates an equirectangular panoramic image by fetching each image tile and stitching them together.
 
