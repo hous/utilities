@@ -15,7 +15,6 @@ def main():
 	"""
 	tile_dimensions = (512, 512)
 	tile_count = (5, 4) 
-	rows = []
 	image = Image.new("RGB", (tile_dimensions[0] * tile_count[0], tile_dimensions[1] * tile_count[1]), None)
 
 	try:
@@ -31,7 +30,6 @@ def main():
 		regex = re.compile(r'panoid\=([^&]*)', re.I)
 		pano_id = regex.findall(urllib.unquote(url))[0]
 		for y in range(tile_count[1]):
-			row = []
 			for x in range(tile_count[0]):
 				img_url = "https://geo2.ggpht.com/cbk?cb_client=maps_sv.tactile&authuser=0&hl=en&panoid=" + pano_id + "&output=tile&x="+str(x)+"&y="+str(y)+"&zoom=3&nbt&fover=2"
 				response = urllib2.urlopen(img_url)
